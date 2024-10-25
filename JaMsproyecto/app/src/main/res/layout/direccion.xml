@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="405dp"
+        android:layout_height="196dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029"
+        app:srcCompat="@drawable/jamsmarket" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.288">
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextText9"
+        android:layout_width="413dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Cra 91b #4-35"
+        android:textAlignment="viewStart"
+        android:textColor="#8C8C8C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.542" />
+
+    <EditText
+        android:id="@+id/editTextText10"
+        android:layout_width="407dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#FF9800"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Direccion de envio"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.325" />
+
+    <EditText
+        android:id="@+id/editTextText11"
+        android:layout_width="401dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Mi cuenta"
+        android:textColor="#FF9800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText12"
+        android:layout_width="408dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="436dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Direcciones de envio"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="319dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="164dp"
+        android:backgroundTint="#FF9800"
+        android:text="Añadir direccion"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="371dp"
+        android:layout_height="99dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
