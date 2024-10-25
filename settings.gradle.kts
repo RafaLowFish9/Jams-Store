@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "JamsStore"
+rootProject.name = "JaMs proyecto"
 include(":app")
+ 
