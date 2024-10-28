@@ -58,4 +58,15 @@
     <string name="mensaje_borrar_usuario">Desea borrar el usuario?</string>
     <string name="borrar_usuario">Borrar usuario</string>
 
+    <!--Descripciones página de categorías-->
+    <string name="imagen_celular">imagen_celular</string>
+    <string name="imagen_alimento">imagen_alimento</string>
+    <string name="imagen_deporte">imagen_deporte</string>
+    <string name="imagen_casa">imagen_casa</string>
+    <string name="imagen_computador">imagen_computador</string>
+    <string name="imagen_videojuego">imagen_videojuego</string>
+    <string name="imagen_juguete">imagen_juguete</string>
+    <string name="imagen_gafas">imagen_gafas</string>
+    <string name="imagen_moda">imagen_moda</string>
+
 </resources>
