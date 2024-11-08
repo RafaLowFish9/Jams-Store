@@ -68,5 +68,7 @@
     <string name="imagen_juguete">imagen_juguete</string>
     <string name="imagen_gafas">imagen_gafas</string>
     <string name="imagen_moda">imagen_moda</string>
+    <string name="bot_n_retroceder">Botón retroceder</string>
+    <string name="mensaje_fecha_descuento">Fecha final descuento.</string>
 
 </resources>

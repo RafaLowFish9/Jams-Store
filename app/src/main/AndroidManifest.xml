@@ -84,15 +84,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".inicio"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".gestionar_usuarios_soporte"
             android:exported="true">
@@ -175,6 +167,16 @@
             android:name=".ui.login.LoginActivity"
             android:exported="true"
             android:label="@string/title_activity_login" />
+
+        <activity
+            android:name=".carrito_compras"
+            android:exported="true"/>
+
+        <activity
+            android:name=".categorias"
+            android:exported="true"/>
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
