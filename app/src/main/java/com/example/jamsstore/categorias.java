@@ -1,6 +1,10 @@
 package com.example.jamsstore;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +24,13 @@ public class categorias extends AppCompatActivity {
             return insets;
         });
 
+        ImageView btn_volver = findViewById(R.id.btn_volver);
+        btn_volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(categorias.this, inicio.class);
+                startActivity(intent);
+            }
+        });
     }
 }

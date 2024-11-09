@@ -1,6 +1,11 @@
 package com.example.jamsstore;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +25,44 @@ public class mi_cuenta extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageView btn_volver = findViewById(R.id.boton_volver);
+        btn_volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mi_cuenta.this, inicio.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView btn_entrar_mi_perfil = findViewById(R.id.mi_perfil);
+        btn_entrar_mi_perfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mi_cuenta.this, perfil.class);
+                startActivity(intent);
+            }
+        });
+
+
+        TextView btn_entrar_direccion_envio = findViewById(R.id.direccion_envio);
+        btn_entrar_direccion_envio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mi_cuenta.this, direccion.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView btn_cerrar_sesion = findViewById(R.id.cerrar_sesion);
+        btn_cerrar_sesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mi_cuenta.this, login.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
