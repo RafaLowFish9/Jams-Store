@@ -310,11 +310,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jamsmarket" />  <!-- Color de fondo naranja -->
-    android:textColor="#000000"        <!-- Color de texto negro -->
-    app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent" />
+        app:srcCompat="@drawable/jamsmarket" />
+    <!-- Color de fondo naranja -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

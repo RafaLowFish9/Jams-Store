@@ -46,6 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="@color/white"
+                android:contentDescription="@string/bot_n_retroceder"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@drawable/arrow_back" />
@@ -111,6 +112,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/white"
+                    android:contentDescription="@string/a_adir_al_carrito"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:srcCompat="@drawable/compr1" />
 
@@ -146,6 +148,7 @@
                     android:layout_gravity="right"
                     android:layout_weight="1"
                     android:backgroundTint="@color/white"
+                    android:contentDescription="@string/desplegar_detalles"
                     app:srcCompat="@drawable/arrow" />
 
             </LinearLayout>
@@ -195,6 +198,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/white"
+                    android:contentDescription="@string/a_adir_al_carrito"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:srcCompat="@drawable/compr1" />
 
@@ -227,6 +231,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="@color/white"
+                    android:contentDescription="@string/desplegar_detalles"
                     app:srcCompat="@drawable/arrow" />
             </LinearLayout>
 

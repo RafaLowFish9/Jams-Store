@@ -70,5 +70,17 @@
     <string name="imagen_moda">imagen_moda</string>
     <string name="bot_n_retroceder">Botón retroceder</string>
     <string name="mensaje_fecha_descuento">Fecha final descuento.</string>
+    <string name="seccon_alimentos">Sección alimentos</string>
+    <string name="seccon_deportes">Sección de deportes</string>
+    <string name="seccon_moda">Sección de moda</string>
+    <string name="seccon_juguetes">Sección de juguetes</string>
+    <string name="seccon_accesorios">Sección de accesorios</string>
+    <string name="secconb_computadoras">Sección de computadoras\n</string>
+    <string name="seccon_videojuegos">Sección de videojuegos</string>
+    <string name="seccon_hogar">Sección artículos del hogar</string>
+    <string name="sobre_nosotros">Consultar información de la empresa</string>
+    <string name="correo_empresa">Enviar correo electrónico a la empresa</string>
+    <string name="desplegar_detalles">Desplegar más detalles</string>
+    <string name="a_adir_al_carrito">Añadir producto al carrito de compras</string>
 
 </resources>

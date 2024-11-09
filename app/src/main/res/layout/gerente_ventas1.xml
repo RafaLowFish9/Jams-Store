@@ -34,6 +34,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/white"
+                android:contentDescription="@string/bot_n_retroceder"
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@drawable/arrow_back" />
         </LinearLayout>

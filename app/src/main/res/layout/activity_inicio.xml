@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:backgroundTint="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".inicio">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -108,6 +108,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FFFFFF"
+                        android:contentDescription="@string/bot_n_retroceder"
                         app:srcCompat="@drawable/rectangle_180" />
 
                     <TextView
@@ -128,6 +129,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FFFFFF"
+                        android:contentDescription="@string/seccon_hogar"
                         app:srcCompat="@drawable/rectangle_188" />
 
                     <TextView
@@ -148,6 +150,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FFFFFF"
+                        android:contentDescription="@string/seccon_juguetes"
                         app:srcCompat="@drawable/rectangle_194" />
 
                     <TextView
@@ -171,14 +174,15 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButto"
+                        android:id="@+id/imagen_alimentos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FFFFFF"
+                        android:contentDescription="@string/seccon_alimentos"
                         app:srcCompat="@drawable/rectangle_178" />
 
                     <TextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/titulo_alimentos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -191,14 +195,15 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton12"
+                        android:id="@+id/imagen_computadores"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FFFFFF"
+                        android:contentDescription="@string/secconb_computadoras"
                         app:srcCompat="@drawable/rectangle_186" />
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/titulo_computadoras"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -211,14 +216,15 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton13"
+                        android:id="@+id/imagen_accesorios"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FFFFFF"
+                        android:contentDescription="@string/seccon_accesorios"
                         app:srcCompat="@drawable/rectangle_192" />
 
                     <TextView
-                        android:id="@+id/textView10"
+                        android:id="@+id/titulo_accesorios"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -238,14 +244,15 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton11"
+                        android:id="@+id/imagen_deportes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FFFFFF"
+                        android:contentDescription="@string/seccon_deportes"
                         app:srcCompat="@drawable/rectangle_169" />
 
                     <TextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/titulo_deportes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -258,14 +265,15 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton12"
+                        android:id="@+id/imagen_videojuegos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FFFFFF"
+                        android:contentDescription="@string/seccon_videojuegos"
                         app:srcCompat="@drawable/rectangle_184" />
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/titulo_videojuegos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -278,14 +286,15 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton13"
+                        android:id="@+id/imagen_moda"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FFFFFF"
+                        android:contentDescription="@string/seccon_moda"
                         app:srcCompat="@drawable/rectangle_190" />
 
                     <TextView
-                        android:id="@+id/textView10"
+                        android:id="@+id/titulo_moda"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -316,6 +325,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="@string/sobre_nosotros"
                     app:srcCompat="@drawable/home" />
 
                 <TextView
@@ -349,6 +359,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="@string/correo_empresa"
                     app:srcCompat="@drawable/mail" />
 
                 <TextView

@@ -61,8 +61,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_person"
-                android:tint="@color/orange"
+                android:src="@drawable/user"
+                app:tint="@color/bright_orange"
                 app:srcCompat="@drawable/user" />
 
             <!-- Texto -->
@@ -93,8 +93,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_location"
-                android:tint="@color/orange"
+                android:src="@drawable/map_pin"
+                app:tint="@color/bright_orange"
                 app:srcCompat="@drawable/map_pin" />
 
             <!-- Texto -->
@@ -125,8 +125,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_logout"
-                android:tint="@color/orange"
+                android:src="@drawable/power"
+                app:tint="@color/bright_orange"
                 app:srcCompat="@drawable/power" />
 
             <!-- Texto -->
