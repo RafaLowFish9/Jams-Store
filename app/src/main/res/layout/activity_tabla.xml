@@ -50,7 +50,7 @@
                 android:textStyle="bold" />
         </TableRow>
 
-        <!-- Filas de datos para cada mes -->
+        <!-- Filas de datos para cada Mes -->
         <TableRow>
 
             <TextView

@@ -46,7 +46,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/campo_fecha_nacimiento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -87,7 +87,7 @@
         app:layout_constraintVertical_bias="0.782" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_continuar_fecha_nacimiento"
         android:layout_width="272dp"
         android:layout_height="50dp"
         android:text="@string/continuar"
