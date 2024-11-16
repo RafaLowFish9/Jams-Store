@@ -27,9 +27,11 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.CollectionReference;
 
+import java.io.Serializable;
+
 public class registro_usuario extends AppCompatActivity {
 
-   // private FirebaseAuth mAuth;
+    // private FirebaseAuth mAuth;
 
 
     //EditText
@@ -41,12 +43,9 @@ public class registro_usuario extends AppCompatActivity {
     private EditText apellido_editText;
     private EditText nombre_usuario_editText;
     private EditText contrase_a_editText;
-    //Campo formulario de la actividad de fecha de nacimiento
-    private EditText fecha_nacimiento_editText;
+
     //Botones
     private Button btn_registro_editText; //Botón de continuar en el formulario de registro
-    private Button btn_fecha_nacimiento; //Botón para continuar en la actividad de introducir fecha de nacimiento
-
 
 
     @Override
@@ -60,7 +59,7 @@ public class registro_usuario extends AppCompatActivity {
 
             // ...
             // Initialize Firebase Auth
-        //    mAuth = FirebaseAuth.getInstance();
+            //    mAuth = FirebaseAuth.getInstance();
 
             //Capturar los elementos editText del formulario por su id
             pais_editText = findViewById(R.id.campo_pais);
@@ -72,7 +71,6 @@ public class registro_usuario extends AppCompatActivity {
 
             //Capturar botones
             btn_registro_editText = findViewById(R.id.button_confirm);
-            btn_fecha_nacimiento = findViewById(R.id.btn_continuar_fecha_nacimiento);
 
 
             //Añadir evento listener para el botón de registro
@@ -87,31 +85,24 @@ public class registro_usuario extends AppCompatActivity {
                     String contrase_a = contrase_a_editText.getText().toString();
                     String nombre_usuario = nombre_usuario_editText.getText().toString();
 
-                    if ((!pais.isEmpty() && !correo.isEmpty()) && (!nombre.isEmpty() && !apellido.isEmpty()) && !nombre_usuario.isEmpty())
-                    {
+                    if ((!pais.isEmpty() && !correo.isEmpty()) && (!nombre.isEmpty() && !apellido.isEmpty()) && !nombre_usuario.isEmpty()) {
+                        Usuario usuario = new Usuario(
+                                null,
+                                pais,
+                                nombre,
+                                apellido,
+                                correo,
+                                contrase_a,
+                                nombre_usuario,
+                                null,
+                                null,
+                                null,
+                                null
+                        );
 
                         Intent intent = new Intent(registro_usuario.this, day_of_birth_activity.class);
+                        intent.putExtra("usuario", usuario);
                         startActivity(intent);
-                        //Capturar la fecha de nacimiento del usuario mediante editText
-                        fecha_nacimiento_editText.findViewById(R.id.campo_fecha_nacimiento);
-                        btn_fecha_nacimiento.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                               //Convertirla a string
-                                String fecha_nacimiento = fecha_nacimiento_editText.getText().toString();
-                                if(!fecha_nacimiento.isEmpty()){
-                                    //Capturar instancia de la base de datos
-                                    FirebaseFirestore baseDeDatos = FirebaseFirestore.getInstance();
-
-                                    //Crear instancia del usuario
-                                    Usuario usuario = new Usuario(null,pais, nombre, apellido, correo, contrase_a, nombre_usuario, fecha_nacimiento, null, null, null );
-
-                                    //Llamar a la función de registro de usuario
-                                    registrar_usuario(baseDeDatos, usuario);
-
-                                }
-                            }
-                        });
 
                     } else {
                         pais_editText.setError("Rellene el campo");
@@ -119,7 +110,6 @@ public class registro_usuario extends AppCompatActivity {
 
                 }
             });
-
 
 
             return insets;
@@ -135,26 +125,9 @@ public class registro_usuario extends AppCompatActivity {
             }
         });
     }
+}
 
 
-    //Función registro de usuario
-    public static void registrar_usuario(FirebaseFirestore baseDeDatos, Usuario usuario) {
-        baseDeDatos.collection("Usuarios")
-                .add(usuario)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "Documento usuarios añadido con ID: " + documentReference.getId());
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error al añadir el documento: " + e);
-                    }
-                });
-        }
-    }
 
 
     //Al iniciar la actividad, comienza checando si el usuario se encuentra loggeado en la aplicación
