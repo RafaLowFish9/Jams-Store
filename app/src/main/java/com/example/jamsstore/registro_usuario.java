@@ -1,33 +1,22 @@
 package com.example.jamsstore;
 
-import static android.content.ContentValues.TAG;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.util.Patterns;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-
 import com.example.jamsstore.modelos_de_datos.Usuario;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.core.Tag;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.CollectionReference;
-
-import java.io.Serializable;
 
 public class registro_usuario extends AppCompatActivity {
 
@@ -37,12 +26,12 @@ public class registro_usuario extends AppCompatActivity {
     //EditText
 
     //Campos formulario de la actividad de registro
-    private EditText pais_editText;
-    private EditText correo_editText;
-    private EditText nombre_editText;
-    private EditText apellido_editText;
-    private EditText nombre_usuario_editText;
-    private EditText contrase_a_editText;
+    private Spinner paisSpinner;
+    private EditText correoEditText;
+    private EditText nombreEditText;
+    private EditText apellidoEditText;
+    private EditText nombreUsuarioEditText;
+    private EditText contraseaEditText;
 
     //Botones
     private Button btn_registro_editText; //Botón de continuar en el formulario de registro
@@ -62,30 +51,37 @@ public class registro_usuario extends AppCompatActivity {
             //    mAuth = FirebaseAuth.getInstance();
 
             //Capturar los elementos editText del formulario por su id
-            pais_editText = findViewById(R.id.campo_pais);
-            correo_editText = findViewById(R.id.campo_correo);
-            nombre_editText = findViewById(R.id.campo_nombre);
-            apellido_editText = findViewById(R.id.campo_apellido);
-            nombre_usuario_editText = findViewById(R.id.campo_nombre_usuario);
-            contrase_a_editText = findViewById(R.id.campo_contrase_a);
+            paisSpinner = (Spinner) findViewById(R.id.campo_pais);
+            ArrayAdapter<CharSequence> adaptador = ArrayAdapter.createFromResource(
+                    this,
+                    R.array.paises,
+                    android.R.layout.simple_spinner_item
+            );
+            adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            paisSpinner.setAdapter(adaptador);
 
-            //Capturar botones
+            //Capturar campos por el id
+            correoEditText = findViewById(R.id.campo_correo);
+            nombreEditText = findViewById(R.id.campo_nombre);
+            apellidoEditText = findViewById(R.id.campo_apellido);
+            nombreUsuarioEditText = findViewById(R.id.campo_nombre_usuario);
+            contraseaEditText = findViewById(R.id.campo_contrase_a);
+
+            //Capturar botón registro
             btn_registro_editText = findViewById(R.id.button_confirm);
-
 
             //Añadir evento listener para el botón de registro
             btn_registro_editText.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //Capturar datos ingresados a cada campo y pasarlos a string
-                    String pais = pais_editText.getText().toString();
-                    String nombre = nombre_editText.getText().toString();
-                    String apellido = apellido_editText.getText().toString();
-                    String correo = correo_editText.getText().toString();
-                    String contrase_a = contrase_a_editText.getText().toString();
-                    String nombre_usuario = nombre_usuario_editText.getText().toString();
+                    if(validarFormulario(paisSpinner, correoEditText, nombreEditText, apellidoEditText, nombreUsuarioEditText, contraseaEditText)) {
+                        String pais = paisSpinner.getSelectedItem().toString();
+                        String nombre = nombreEditText.getText().toString();
+                        String apellido = apellidoEditText.getText().toString();
+                        String correo = correoEditText.getText().toString();
+                        String contrase_a = contraseaEditText.getText().toString();
+                        String nombre_usuario = nombreEditText.getText().toString();
 
-                    if ((!pais.isEmpty() && !correo.isEmpty()) && (!nombre.isEmpty() && !apellido.isEmpty()) && !nombre_usuario.isEmpty()) {
                         Usuario usuario = new Usuario(
                                 null,
                                 pais,
@@ -103,9 +99,6 @@ public class registro_usuario extends AppCompatActivity {
                         Intent intent = new Intent(registro_usuario.this, day_of_birth_activity.class);
                         intent.putExtra("usuario", usuario);
                         startActivity(intent);
-
-                    } else {
-                        pais_editText.setError("Rellene el campo");
                     }
 
                 }
@@ -116,6 +109,7 @@ public class registro_usuario extends AppCompatActivity {
         });
 
 
+
         Button btn_continuar = findViewById(R.id.button_confirm);
         btn_continuar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,6 +118,56 @@ public class registro_usuario extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+
+    //Función para validar todos los cambios del formulario
+    public boolean validarFormulario(Spinner spinnerPaises, EditText editTextCorreo, EditText editTextNombre, EditText editTextApellido, EditText editTextNombreUsuario, EditText editTextContraseña ) {
+        boolean validar = true;
+
+        //País
+        String pais = spinnerPaises.getSelectedItem().toString();
+        if(pais.equals("Seleccione su país")) {
+            TextView textoError = (TextView) spinnerPaises.getSelectedView();
+            textoError.setError("Seleccione un país");
+            validar = false;
+        }
+
+        //Correo
+        String correo = editTextCorreo.getText().toString();
+        if(correo.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(correo).matches()) {
+            editTextCorreo.setError("Ingrese una dirección de correo electrónico válida");
+            validar = false;
+        }
+        //Validar nombre y apellido
+        String nombre = editTextNombre.getText().toString();
+        String apellido = editTextApellido.getText().toString();
+        if(nombre.isEmpty() || !nombre.matches("^[a-zA-Z ]+$") || nombre.length() > 20) {
+            editTextNombre.setError("Nombre inválido, introduzca solo letras (máximo 20 caracteres)");
+            validar = false;
+        }
+        if(apellido.isEmpty() || !apellido.matches(("^[a-zA-Z ]+$")) || apellido.length() > 20) {
+            editTextApellido.setError("Apellido inválido, introduzca solo letras (Máximo 20 caracteres)");
+            validar = false;
+        }
+
+        //Validar nombre de usuario
+        String nombreUsuario = editTextNombreUsuario.getText().toString();
+        if(nombreUsuario.isEmpty() || !nombreUsuario.matches("^[a-zA-Z0-9_]{4,20}")) {
+            editTextNombreUsuario.setError("El nombre de usuario debe contener al menos 4-20 caracteres y no utilizar espacios.");
+            validar = false;
+        }
+
+        //Validar contraseña
+        String contraseña = editTextContraseña.getText().toString();
+        if(contraseña.isEmpty() || !contraseña.matches("^(?=.[A-Z])(?=.[a-z])(?=.\\\\d)(?=.[@#$%^&+=]).{8,}$")) {
+            editTextContraseña.setError("Su contraseña debe tener al menos 8 caracteres, " +
+                    "utilizando al menos una mayúscula, una minúscula, un número " +
+                    "y un caracter especial");
+                    validar = false;
+        }
+
+        return validar;
     }
 }
 

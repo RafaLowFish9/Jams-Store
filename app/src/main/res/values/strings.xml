@@ -86,4 +86,13 @@
     <string name="mi_cuenta">Mi cuenta</string>
     <string name="mi_perfil_nombre">Mi perfil (nombre)</string>
 
+
+    <!--Opciones país-->
+    <string-array name="paises">
+        <item>Seleccione su país</item>
+        <item>Colombia</item>
+        <item>México</item>
+        <item>Chile</item>
+        <item>Perú</item>
+    </string-array>
 </resources>

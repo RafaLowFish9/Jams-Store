@@ -3,6 +3,7 @@ package com.example.jamsstore;
 
 import static android.content.ContentValues.TAG;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
@@ -59,6 +60,9 @@ public class day_of_birth_activity extends AppCompatActivity {
                                 Log.w(TAG, "Error al añadir el documento: " + e);
                             }
                         });
+                Intent intent = new Intent(day_of_birth_activity.this, inicio.class);
+                startActivity(intent);
+
             }
         });
     }

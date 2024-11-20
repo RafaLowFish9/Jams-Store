@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.027"
         app:srcCompat="@drawable/jamsmarket" />
 
-    <EditText
+    <Spinner
         android:id="@+id/campo_pais"
         android:layout_width="288dp"
         android:layout_height="48dp"

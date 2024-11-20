@@ -99,6 +99,7 @@
 
                     <ImageButton
                         android:id="@+id/imagen_celulares"
+                        android:contentDescription="@string/imagen_celular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FFFFFF"
