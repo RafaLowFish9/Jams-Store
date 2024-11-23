@@ -51,7 +51,7 @@ public class registro_usuario extends AppCompatActivity {
             //    mAuth = FirebaseAuth.getInstance();
 
             //Capturar los elementos editText del formulario por su id
-            paisSpinner = (Spinner) findViewById(R.id.campo_pais);
+            paisSpinner = findViewById(R.id.campo_pais);
             ArrayAdapter<CharSequence> adaptador = ArrayAdapter.createFromResource(
                     this,
                     R.array.paises,
@@ -122,7 +122,7 @@ public class registro_usuario extends AppCompatActivity {
     }
 
     //Función para validar todos los cambios del formulario
-    public boolean validarFormulario(Spinner spinnerPaises, EditText editTextCorreo, EditText editTextNombre, EditText editTextApellido, EditText editTextNombreUsuario, EditText editTextContraseña ) {
+    public boolean validarFormulario(Spinner spinnerPaises, EditText editTextCorreo, EditText editTextNombre, EditText editTextApellido, EditText editTextNombreUsuario, EditText editTextContrasena ) {
         boolean validar = true;
 
         //País
@@ -157,11 +157,11 @@ public class registro_usuario extends AppCompatActivity {
             editTextNombreUsuario.setError("El nombre de usuario debe contener al menos 4-20 caracteres y no utilizar espacios.");
             validar = false;
         }
-
+        //c0Ntras3$#a
         //Validar contraseña
-        String contraseña = editTextContraseña.getText().toString();
-        if(contraseña.isEmpty() || !contraseña.matches("^(?=.[A-Z])(?=.[a-z])(?=.\\\\d)(?=.[@#$%^&+=]).{8,}$")) {
-            editTextContraseña.setError("Su contraseña debe tener al menos 8 caracteres, " +
+        String contrasena = editTextContrasena.getText().toString();
+        if(contrasena.isEmpty() || !contrasena.matches("^[a-zA-Z0-9_]{4,20}")) {
+            editTextContrasena.setError("Su contraseña debe tener al menos 8 caracteres, " +
                     "utilizando al menos una mayúscula, una minúscula, un número " +
                     "y un caracter especial");
                     validar = false;

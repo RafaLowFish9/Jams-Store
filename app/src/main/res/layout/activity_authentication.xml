@@ -47,7 +47,7 @@
         app:layout_constraintVertical_bias="0.075" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/digito1"
         android:layout_width="52dp"
         android:layout_height="59dp"
         android:ems="10"
@@ -62,7 +62,7 @@
         app:layout_constraintVertical_bias="0.112" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/digito2"
         android:layout_width="52dp"
         android:layout_height="59dp"
         android:ems="10"
@@ -70,13 +70,13 @@
         android:hint="@string/empty_string"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText4"
-        app:layout_constraintStart_toEndOf="@+id/editTextText"
+        app:layout_constraintEnd_toStartOf="@+id/digito3"
+        app:layout_constraintStart_toEndOf="@+id/digito1"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         app:layout_constraintVertical_bias="0.112" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/digito3"
         android:layout_width="52dp"
         android:layout_height="59dp"
         android:ems="10"
@@ -91,7 +91,7 @@
         app:layout_constraintVertical_bias="0.108" />
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/digito4"
         android:layout_width="52dp"
         android:layout_height="59dp"
         android:ems="10"
@@ -106,7 +106,7 @@
         app:layout_constraintVertical_bias="0.108" />
 
     <EditText
-        android:id="@+id/editTextText6"
+        android:id="@+id/digito5"
         android:layout_width="52dp"
         android:layout_height="59dp"
         android:ems="10"
@@ -121,7 +121,7 @@
         app:layout_constraintVertical_bias="0.108" />
 
     <EditText
-        android:id="@+id/editTextText7"
+        android:id="@+id/digito6"
         android:layout_width="52dp"
         android:layout_height="59dp"
         android:ems="10"
