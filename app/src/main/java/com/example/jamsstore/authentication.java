@@ -29,6 +29,7 @@ public class authentication extends AppCompatActivity {
     private String idVerificacion;
     private String numeroTelefono;
 
+
     //Input del código de verificación
     private EditText digito1;
     private EditText digito2;

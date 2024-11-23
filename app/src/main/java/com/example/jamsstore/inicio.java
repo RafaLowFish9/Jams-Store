@@ -53,5 +53,15 @@ public class inicio extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        TextView btnAccesoSoporte = findViewById(R.id.mi_soporte);
+        btnAccesoSoporte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(inicio.this, contacto.class);
+                startActivity(intent);
+                finish();;
+            }
+        });
     }
 }

@@ -50,8 +50,8 @@ public class login extends AppCompatActivity {
 
         btnIniciarSesion.setOnClickListener(view -> {
             //Pasar a string los campos capturados en el inicio de sesión
-            String email = emailEditText.getText().toString();
-            String contrasena = contrasenaEditText.getText().toString();
+            String email = emailEditText.getText().toString().trim();
+            String contrasena = contrasenaEditText.getText().toString().trim();
 
             //Validar que no estén vacíos
             if(!email.isEmpty() && !contrasena.isEmpty()) {
@@ -67,7 +67,7 @@ public class login extends AppCompatActivity {
                                         Toast.LENGTH_SHORT).show();
                            }
                         });
-            } else if (email.equals("enterSystem") || contrasena.equals("enterSystem")) {
+            } else if (email.equals("enterSystem")  || contrasena.equals("jamsMarket@gmail.com")) {
                 Intent intent = new Intent(this, crud_admin.class);
                 startActivity(intent);
                 finish();

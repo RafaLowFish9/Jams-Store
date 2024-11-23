@@ -3,7 +3,7 @@ package com.example.jamsstore.modelos_de_datos;
 import java.io.Serializable;
 import java.util.List;
 
-public class Usuario implements Serializable {
+public class Usuario implements Serializable  {
     //Colección Usuario
     private String id_usuario;
     private String pais;
