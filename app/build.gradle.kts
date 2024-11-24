@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.jamsstore"
+    namespace = "com.demoApp.jamsstore"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.jamsstore"
+        applicationId = "com.demoApp.jamsstore"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -50,7 +50,7 @@ dependencies {
 
 
     // Import the Firebase BoM
-    implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
+    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
 
     // When using the BoM, you don't specify versions in Firebase library dependencies
 
