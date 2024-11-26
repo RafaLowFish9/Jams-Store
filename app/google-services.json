@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:462779153834:android:d6502ba345db162d757fd3",
         "android_client_info": {
-          "package_name": "com.demoApp.jamsstore"
+          "package_name": "com.example.jamsstore"
         }
       },
       "oauth_client": [],

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.demoApp.jamsstore"
+    namespace = "com.example.jamsstore"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.demoApp.jamsstore"
+        applicationId = "com.example.jamsstore"
         minSdk = 24
         targetSdk = 34
         versionCode = 2
