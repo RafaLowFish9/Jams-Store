@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.jamsstore"
+    namespace = "com.appJamsMarket.jamsMarket"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.jamsstore"
+        applicationId = "com.appJamsMarket.jamsMarket"
         minSdk = 24
         targetSdk = 34
-        versionCode = 2
-        versionName = "2.0"
+        versionCode = 3
+        versionName = "2.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -32,6 +32,10 @@ android {
     }
     buildFeatures {
         viewBinding = true
+    }
+
+    signingConfigs {
+
     }
 }
 
@@ -58,7 +62,7 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
 
     // See https://firebase.google.com/docs/android/setup#available-libraries
-    // For example, add the dependencies for Firebase Authentication and Cloud Firestore
+    // For appJamsMarket, add the dependencies for Firebase Authentication and Cloud Firestore
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-database")

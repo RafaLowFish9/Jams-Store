@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.jamsstore">
+    package="com.appJamsMarket.jamsMarket">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
 
     <application
-        android:name="com.example.jamsstore.JamsStore"
+        android:name="com.appJamsMarket.jamsMarket.JamsMarket"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -18,85 +18,84 @@
         android:theme="@style/Theme.JamsStore"
         tools:targetApi="31">
         <activity
-            android:name="com.example.jamsstore.pasarelaDePagos"
-            android:exported="false" />
+            android:name="com.appJamsMarket.jamsMarket.pasarelaDePagos"
+            android:exported="true" />
 
         <activity
-            android:name="com.example.jamsstore.crud_admin"
+            android:name="com.appJamsMarket.jamsMarket.crud_admin"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.Ingreso_numero_usuario"
-            android:exported="false" />
+            android:name="com.appJamsMarket.jamsMarket.Ingreso_numero_usuario"
+            android:exported="true" />
 
         <activity
-            android:name="com.example.jamsstore.login"
+            android:name="com.appJamsMarket.jamsMarket.login"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
     </activity>
 
         <activity
-            android:name="com.example.jamsstore.ventas_descuento"
+            android:name="com.appJamsMarket.jamsMarket.ventas_descuento"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.ventana_vista_tipo_producto"
+            android:name="com.appJamsMarket.jamsMarket.ventana_vista_tipo_producto"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.tabla"
+            android:name="com.appJamsMarket.jamsMarket.tabla"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.soporte"
+            android:name="com.appJamsMarket.jamsMarket.soporte"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.perfil"
+            android:name="com.appJamsMarket.jamsMarket.perfil"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.mi_cuenta"
+            android:name="com.appJamsMarket.jamsMarket.mi_cuenta"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.inventario_update"
+            android:name="com.appJamsMarket.jamsMarket.inventario_update"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.inventario_gestion"
+            android:name="com.appJamsMarket.jamsMarket.inventario_gestion"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.gestionar_usuarios_soporte"
+            android:name="com.appJamsMarket.jamsMarket.gestionar_usuarios_soporte"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.gerente_ventas2"
+            android:name="com.appJamsMarket.jamsMarket.gerente_ventas2"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.gerente_ventas1"
+            android:name="com.appJamsMarket.jamsMarket.gerente_ventas1"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.direccion"
+            android:name="com.appJamsMarket.jamsMarket.direccion"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.contacto"
+            android:name="com.appJamsMarket.jamsMarket.contacto"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.gestionar_usuario"
+            android:name="com.appJamsMarket.jamsMarket.gestionar_usuario"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.registro_usuario"
+            android:name="com.appJamsMarket.jamsMarket.registro_usuario"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.day_of_birth_activity"
+            android:name="com.appJamsMarket.jamsMarket.day_of_birth_activity"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.authentication"
+            android:name="com.appJamsMarket.jamsMarket.authentication"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.carrito_compras"
+            android:name="com.appJamsMarket.jamsMarket.carrito_compras"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.categorias"
+            android:name="com.appJamsMarket.jamsMarket.categorias"
             android:exported="true" />
         <activity
-            android:name="com.example.jamsstore.inicio"
+            android:name="com.appJamsMarket.jamsMarket.inicio"
             android:exported="true" />
     </application>
 
