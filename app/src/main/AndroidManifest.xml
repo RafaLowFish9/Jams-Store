@@ -46,9 +46,7 @@
         <activity
             android:name=".ventas_descuento"
             android:exported="true" />
-        <activity
-            android:name=".ventana_vista_tipo_producto"
-            android:exported="true" />
+
         <activity
             android:name=".tabla"
             android:exported="true" />
