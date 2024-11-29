@@ -1,54 +1,59 @@
 package com.demoApp.jamsstore.modelos_de_datos;
 
 public class Producto {
-    private String id_producto;
     private String nombre;
-    private double valor;
+    private String descripcion;
+    private String precio;
+    private String categoria;
+    private String imagenUrl; // URL de la imagen del producto
 
-    //Llave foránea
-    private String id_categoria;
-
-    //Constructor vacío para el firebase
-    public Producto(){}
-
-    public Producto(String id_producto, String nombre, double valor, String id_categoria){
-        this.id_categoria = id_categoria;
+    // Constructor
+    public Producto(String nombre, String descripcion, String precio, String categoria, String imagenUrl) {
         this.nombre = nombre;
-        this.valor = valor;
-        this.id_categoria = id_categoria;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.categoria = categoria;
+        this.imagenUrl = imagenUrl;
     }
 
-    //Getters
-    public String getId_producto() {
-        return id_producto;
-    }
-
+    // Getters y Setters
     public String getNombre() {
         return nombre;
-    }
-
-    public double getValor() {
-        return valor;
-    }
-
-    public String getId_categoria() {
-        return id_categoria;
-    }
-
-    //Setters
-    public void setId_producto(String id_producto) {
-        this.id_producto = id_producto;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setId_categoria(String id_categoria) {
-        this.id_categoria = id_categoria;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(String precio) {
+        this.precio = precio;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getImagenUrl() {
+        return imagenUrl;
+    }
+
+    public void setImagenUrl(String imagenUrl) {
+        this.imagenUrl = imagenUrl;
     }
 }

@@ -26,14 +26,6 @@ public class inicio extends AppCompatActivity {
 
         });
 
-        ImageButton btn_seccion_celulares = findViewById(R.id.imagen_celulares);
-        btn_seccion_celulares.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(inicio.this, ventana_vista_tipo_producto.class);
-                startActivity(intent);
-            }
-        });
 
         TextView btn_seccion_categorias = findViewById(R.id.text_categoria);
         btn_seccion_categorias.setOnClickListener(new View.OnClickListener() {

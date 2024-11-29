@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Agregarproductos">
+
+    <TextView
+        android:id="@+id/textox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="agregar producto"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:background="@color/bright_orange"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/imagenpro"
+        android:layout_width="353dp"
+        android:layout_height="276dp"
+        android:layout_below="@+id/textox"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="26dp"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_agregar_imagen" />
+
+    <EditText
+        android:id="@+id/nombrepro"
+        android:layout_width="331dp"
+        android:layout_height="61dp"
+        android:layout_below="@+id/imagenpro"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:hint="Nombre del producto"
+        android:inputType="textMultiLine"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/descripcionpro"
+        android:layout_width="332dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/nombrepro"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:hint="Descripcion del producto"
+        android:inputType="textMultiLine"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/preciopro"
+        android:layout_width="334dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/descripcionpro"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:hint="Precio del producto"
+        android:inputType="textMultiLine"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/categoriapro"
+        android:layout_width="334dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/preciopro"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:hint="Categoria del producto"
+        android:inputType="textMultiLine"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/agregarpro"
+        android:layout_width="334dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/preciopro"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/bright_orange"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:text="Agregar producto"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+</RelativeLayout>

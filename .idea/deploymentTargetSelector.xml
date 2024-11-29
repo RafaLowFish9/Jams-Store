@@ -5,7 +5,10 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="pasarelaPagos">
+      <SelectionState runConfigName="agregarPro">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="verProd">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
