@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "705971189316",
-    "project_id": "jamsmarket-2981c",
-    "storage_bucket": "jamsmarket-2981c.firebasestorage.app"
+    "project_number": "1095773731743",
+    "project_id": "proyecto-jamsmarket",
+    "storage_bucket": "proyecto-jamsmarket.firebasestoragse.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:705971189316:android:199b644bb8f55010992e11",
+        "mobilesdk_app_id": "1:1095773731743:android:c976ca90ecfb17632e5baa",
         "android_client_info": {
-          "package_name": "com.appJamsMarket.jamsMarket"
+          "package_name": "com.demoApp.jamsstore"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCRJjxJ1iVUVBWcZlvAKzmMCnDBu5hPZm8"
+          "current_key": "AIzaSyAvCKH_wCGptHcdROOwbQFC1ZWYktYIPXs"
         }
       ],
       "services": {
